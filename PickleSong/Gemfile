@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-
-
+gem "haml-rails"
+gem 'yourub', '~> 1.0.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-#Devise gem 
+#Devise gem
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
