@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SongPicklr::VERSION
   spec.authors       = ["ericodes"]
   spec.email         = ["erica.cheung@flatironschool.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Searches youtube for karaoke songs.}
+  spec.description   = %q{Searches youtube for great karaoke songs.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
