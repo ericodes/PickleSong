@@ -4,5 +4,5 @@ PickleSong!
 
 <% if @result %>
     <h1><%= @result.title %></h1>
-    <a href="<%= @result.url %>"><img src= "<%= @result.thumbnail %>" /></a>
+    <iframe width="560" height="315" src="//<%= @result.embed_url %>" frameborder="0" allowfullscreen></iframe>
 <% end %>
