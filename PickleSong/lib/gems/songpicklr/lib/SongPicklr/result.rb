@@ -32,3 +32,6 @@ module SongPicklr
         thumbnail: thumbnail
         embed_url: embed_url
       }
+    end
+  end
+end
