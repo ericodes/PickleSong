@@ -13,11 +13,11 @@ module SongPicklr
     end
 
     def url
-      @url ||= "youtube.com/watch?v=#{@video_id}"
+      @url ||= "http://www.youtube.com/watch?v=#{video_id}"
     end
 
     def embed_url
-      @embed_url ||= "youtube.com/embed/#{@video_id}"
+      @embed_url ||= "youtube.com/embed/#{video_id}"
     end
 
     def thumbnail
