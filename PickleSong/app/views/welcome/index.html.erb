@@ -3,7 +3,6 @@ PickleSong!
 <%= render "form" %>
 
 <% if @result %>
-    <%= @result.title %> <br>
-    <%= @result.embed_url %>
+    <h1><%= @result.title %></h1>
     <a href="<%= @result.url %>"><img src= "<%= @result.thumbnail %>" /></a>
 <% end %>
