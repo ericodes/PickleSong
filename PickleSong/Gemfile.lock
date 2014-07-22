@@ -1,3 +1,8 @@
+PATH
+  remote: lib/gems/SongPicklr
+  specs:
+    SongPicklr (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -113,6 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  SongPicklr!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
