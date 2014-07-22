@@ -1,11 +1,9 @@
 PickleSong!
+
 <%= render "form" %>
 
-<%=@result.title%> <br>
-
-<%=@result.embed_url%>
-
-
-<a href="<%=@result.url%>">
-<img src= "<%=@result.thumbnail%>" />
-</a>
+<% if @result %>
+    <%= @result.title %> <br>
+    <%= @result.embed_url %>
+    <a href="<%= @result.url %>"><img src= "<%= @result.thumbnail %>" /></a>
+<% end %>
