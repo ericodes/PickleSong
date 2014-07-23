@@ -1,12 +1,17 @@
 $(document).on('page:change', function() {
     $('.playlist').click(function() {
-        var songData = $('.playlist').data('songs');
+        var songData = $(this).data('songs');
+        var playlistName = $(this).data('name');
+        $('#playlist_songs').empty();
         for (var i = 0; i < songData.length; i++) {
-            $('#playlist_songs').append("<div class=song><h4>" + songData[i].title + "</h4>" + "<div><img src=" + songData[i].thumbnail + " /></div></div>");
-        }
+            var templateString = "<div class='song'><h4><%= item.title %></h4><div><img src='<%=item.thumbnail%>'></div></div>";
+            var template = _.template(templateString);
+            $('#playlist_songs').append(template({
+                item: songData[i]
+            }));
+        };
     });
 });
-
 
 $(document).ready(function() {
     $('.vid-item').click(function() {
