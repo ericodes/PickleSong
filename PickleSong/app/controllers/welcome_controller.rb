@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    @playlists = Playlist.all
     @query = SongPicklr::Search.new(params[:q])
     if params[:q]
       @results = @query.query_items
