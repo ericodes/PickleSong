@@ -1,3 +1,16 @@
 <div id="playlist_panel">
 
+  <span class="dropdown polls-subtitle">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists<b class="caret"></b></a>
+    <ul class="dropdown-menu" role="menu">
+        <%@playlists.each_with_index do |playlist, i|%>
+          <li class="playlist" data-playlistID="<%=playlist.id%>"><%=playlist.name%></li>
+        <%end%>
+    </ul>
+  </span>
+
+  <div id="playlist_songs">
+
+  </div>
+
 </div>
