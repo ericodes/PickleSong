@@ -1,8 +1,10 @@
-PickleSong!
-
 <%= render "form" %>
 
-<% if @result %>
-    <h1><%= @result.title %></h1>
-    <iframe width="560" height="315" src="//<%= @result.embed_url %>" frameborder="0" allowfullscreen></iframe>
+<% if @results %>
+    <% @results.each do |result| %>
+        <h1><%= result.title %></h1>
+        <iframe width="560" height="315" src="//<%= result.embed_url %>" frameborder="0" allowfullscreen></iframe>
+        <div id="results">
+    <% end %>
+    </div>
 <% end %>
