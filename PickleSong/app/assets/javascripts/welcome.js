@@ -1,6 +1,8 @@
 $( document ).on( 'page:change', function () {
   $('.playlist').click(function() {
-    var id = $('.playlist').data('id')
-    $('#playlist_songs').append(<%=Playlist.find(id).name%>);
+    var songData = $('.playlist').data('songs');
+    for(var i=0; i<songData.length; i++) {
+      $('#playlist_songs').append(songData[i].name);
+    };
   });
 });
