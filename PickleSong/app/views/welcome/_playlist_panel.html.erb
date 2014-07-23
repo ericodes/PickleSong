@@ -3,8 +3,9 @@
   <span class="dropdown polls-subtitle">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists<b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu">
+        <li class="new_playlist">New playlist</li>
         <%@playlists.each_with_index do |playlist, i|%>
-          <li class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>"><%=playlist.name%></li>
+          <li class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>" data-name="<%=playlist.name%>"> <%=playlist.name%></li>
         <%end%>
     </ul>
   </span>
@@ -12,4 +13,11 @@
   <div id="playlist_songs">
   </div>
 
+</div>
+
+<div class="form">
+  <%=form_tag controller: "welcome", action: "create", method: "post" do%>
+    <%= text_field_tag "playlist[name]"%>
+    <%= submit_tag%>
+  <%end%>
 </div>

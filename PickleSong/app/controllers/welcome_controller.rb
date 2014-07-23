@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    @playlist = Playlist.new
     @playlists = Playlist.all
     @query = SongPicklr::Search.new(params[:q])
     if params[:q]
@@ -9,5 +10,19 @@ class WelcomeController < ApplicationController
       @alternatives = @results[1..-1]
     end
     render :index
+  end
+
+  def create
+    new_playlist = Playlist.new(playlist_params)
+    if !new_playlist.save
+      flash[:notice] = "Please enter a name."
+    end
+    render :index
+  end
+
+  private
+
+  def playlist_params
+    params.require(:playlist).permit(:name)
   end
 end

@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require underscore
 //= require bootstrap.js
 //= require jquery.plugin.js
 //= require jquery.countdown.js
