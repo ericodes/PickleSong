@@ -1,8 +1,12 @@
 class WelcomeController < ApplicationController
   def index
     @query = SongPicklr::Search.new(params[:q])
-    @results = @query.query_items if params[:q]
-    # @result = @results.query_items.first if params[:q]
+    if params[:q]
+      @results = @query.query_items
+      # binding.pry
+      @first_result = @results.first
+      @alternatives = @results[1..-1]
+    end
     render :index
   end
 end
