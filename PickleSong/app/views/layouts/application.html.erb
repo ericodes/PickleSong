@@ -32,21 +32,12 @@
                                     Logged in as <strong><%= current_user.email %></strong>.
                                 </li>
                                 <li>
-                                    <%= link_to 'Edit profile', edit_user_registration_path %> |
+                                    <%= link_to 'EDIT PROFILE', edit_user_registration_path %> |
                                 </li>
                                 <li>
-                                    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                                    <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
                                 </li>
-                                  <% else %>
-                                <li>
-                                    <%= link_to "Sign up", new_user_registration_path %> |
-                                </li>
-                                <li>
-                                    <%= link_to "Login", new_user_session_path %>
-                                </li>
-                            <% end %>
-
-                            <li class="dropdown">
+                                <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLAYLISTS <b class="caret"></b></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="light-index-video.html">Party</a>
@@ -55,6 +46,14 @@
                                     </li>
                                 </ul>
                             </li>
+                                  <% else %>
+                                <li>
+                                    <%= link_to "SIGN UP", new_user_registration_path %> |
+                                </li>
+                                <li>
+                                    <%= link_to "LOGIN", new_user_session_path %>
+                                </li>
+                            <% end %>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

@@ -22,3 +22,11 @@
  *= require color.css
  *= require_tree .
  */
+
+.navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-weight: 900;
+    font-size: 13px;
+}
+
