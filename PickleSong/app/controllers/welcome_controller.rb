@@ -4,8 +4,8 @@ class WelcomeController < ApplicationController
     @query = SongPicklr::Search.new(params[:q])
     if params[:q]
       @results = @query.query_items
-      # binding.pry
       @first_result = @results.first
+      # binding.pry
       @alternatives = @results[1..-1]
     end
     render :index
