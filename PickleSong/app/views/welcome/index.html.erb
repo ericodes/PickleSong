@@ -11,7 +11,7 @@
             <div id="results">
                 <div class="section-inner">
                     <% @alternatives.each_with_index do |result, index| %>
-                        <div class="vid-item-<%= index %>" data-embed_url="<%=result.embed_url%>">
+                        <div class="vid-item" data-embed_url="<%=result.embed_url%>">
                             <div class="thumb">
                                 <img src="<%= result.thumbnail %>">
                             </div>
