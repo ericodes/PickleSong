@@ -2,9 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.truncate {
-    width: 372px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+
+.vid-container {
+  position: relative;
+  padding-bottom: 52%;
+  padding-top: 30px;
+  height: 0;
+}
+
+.vid-container iframe,
+.vid-container object,
+.vid-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vid-list-container {
+  width: 92%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left:4%;
+  padding-bottom: 20px;
+}
+
+.vid-list {
+  width: 1344px;
+  position: relative;
+  top:0;
+  left: 0;
+}
+
+div[class*="vid-item"]{
+  display: block;
+  width: 148px;
+  height: 148px;
+  float: left;
+  margin: 0;
+  padding: 10px;
+}
+
+.thumb {
+  overflow:hidden;
+  height: 84px;
+}
+
+.thumb img {
+  width: 100%;
+  position: relative;
+  top: -13px;
+}
+
+div[class*="vid-item"] .desc {
+  width: 100px;
+
+  color: black;
+  font-size: 15px;
+  margin-top:5px;
 }
