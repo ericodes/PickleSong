@@ -1,3 +1,4 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="section-outer">
     <div class="section-wrapper">
 
@@ -8,8 +9,9 @@
                 <iframe id="vid_frame" width="853" height="480" src="//<%= @first_result.embed_url %>" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
-            <div id="results">
-                <div class="section-inner">
+            <!--Results List-->
+            <div class="vid-list-container">
+                <div class="vid-list">
                     <% @alternatives.each_with_index do |result, index| %>
                         <div class="vid-item" data-embed_url="<%=result.embed_url%>">
                             <div class="thumb">
@@ -21,9 +23,13 @@
                         </div>
                         <% end %>
 
-                </div><!--section-inner-->
-            </div><!--results-->
+                </div><!--vid-list-->
+            </div><!--vid-list-container-->
             <% end %>
+            <div class="arrows">
+    <div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+    <div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+</div>
          </div><!--col-md-9-->
         <div class="col-md-3">
             <%= render "form" %>
@@ -31,4 +37,5 @@
     </div><!--section-wrapper-->
   <%= render "playlist_panel"%>
 </div><!--section-outer-->
+
 

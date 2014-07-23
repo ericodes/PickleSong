@@ -30,7 +30,7 @@
 }
 
 .vid-list {
-  width: 1344px;
+  width: 2100px;
   position: relative;
   top:0;
   left: 0;
@@ -62,4 +62,47 @@ div[class*="vid-item"] .desc {
   color: black;
   font-size: 15px;
   margin-top:5px;
+}
+
+.arrows {
+  position:relative;
+  width: 100%;
+}
+
+.arrow-left {
+  color: #fff;
+  position: absolute;
+  background: #777;
+  padding: 15px;
+  left: -25px;
+  top: -130px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.arrow-right {
+  color: #fff;
+  position: absolute;
+  background: #777;
+  padding: 15px;
+  right: -25px;
+  top: -130px;
+  z-index:100;
+}
+
+@media (max-width: 624px) {
+  .arrows {
+    position:relative;
+    margin: 0 auto;
+    width:96px;
+  }
+  .arrow-left {
+    left: 0;
+    top: -20px;
+  }
+
+  .arrow-right {
+    right: 0;
+    top: -20px;
+  }
 }
