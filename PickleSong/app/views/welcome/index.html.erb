@@ -4,19 +4,26 @@
         <div class="col-md-9">
          <% if @results %>
             <h1><%= @first_result.title %></h1>
-            <iframe width="853" height="480" src="//<%= @first_result.embed_url %>" frameborder="0" allowfullscreen></iframe>
+            <div class="vid-container">
 
+            <iframe width="853" height="480"
+            src="//<%= @first_result.embed_url %>"
+            frameborder="0" allowfullscreen id="vid_frame">
+            </iframe>
+            </div>
             <div id="results">
                 <div class="section-inner">
-                    <ul id="og-grid" class="og-grid">
+
                         <% @alternatives.each do |result| %>
-                        <li>
-                            <div class="og-overlay"></div>
-                            <p class="og-title truncate"><%= result.title %></p>
-                            <iframe width="372" height="210" src="//<%= result.embed_url %>" frameborder="0" allowfullscreen></iframe>
-                        </li>
+                        <div class="vid-item" data-embed_url="<%=result.embed_url%>">
+                            <div class="thumb">
+                <img src="<%= result.thumbnail %>"
+                        </div>
+                        <div class="truncate"><%= result.title %></div>
+                        </div>
+                        </div>
                         <% end %>
-                    </ul>
+
                 </div>
             </div><!--results-->
             <% end %>
