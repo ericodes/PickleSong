@@ -5,7 +5,7 @@
     <ul class="dropdown-menu" role="menu">
         <li class="new_playlist">New playlist</li>
         <%@playlists.each_with_index do |playlist, i|%>
-          <li class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>" data-name="<%=playlist.name%>"> <%=playlist.name%></li>
+          <li id= "<%=playlist.id%>" class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>" data-name="<%=playlist.name%>"> <%=playlist.name%></li>
         <%end%>
     </ul>
   </span>
@@ -16,8 +16,8 @@
 </div>
 
 <div class="form">
-  <%=form_tag controller: "welcome", action: "create", method: "post" do%>
-    <%= text_field_tag "playlist[name]"%>
-    <%= submit_tag%>
+  <%=form_for @playlist do |f|%>
+    <%= f.text_field :name%>
+    <%= f.submit%>
   <%end%>
 </div>
