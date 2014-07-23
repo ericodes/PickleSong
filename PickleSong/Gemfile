@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Loads environment variables from `.env`.
+gem 'dotenv-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
@@ -13,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem "pry"
-#Devise gem
+# Devise gem
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -44,3 +47,4 @@ end
 
 # Local Gems
 gem 'SongPicklr', path: 'lib/gems/SongPicklr'
+
