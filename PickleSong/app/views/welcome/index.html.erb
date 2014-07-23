@@ -1,10 +1,17 @@
 <%= render "form" %>
 
 <% if @results %>
-    <% @results.each do |result| %>
-        <h1><%= result.title %></h1>
-        <iframe width="560" height="315" src="//<%= result.embed_url %>" frameborder="0" allowfullscreen></iframe>
-        <div id="results">
+    <h1><%= @first_result.title %></h1>
+        <iframe width="560" height="315" src="//<%= @first_result.embed_url %>" frameborder="0" allowfullscreen></iframe>
+    
+    <div id="results">
+    <% @alternatives.each do |result| %>
+        <%= result.title %>
+        <iframe width="186" height="105" src="//<%= result.embed_url %>" frameborder="0" allowfullscreen></iframe>
     <% end %>
-    </div>
+    </div><!--results-->
+
+    
+
+
 <% end %>
