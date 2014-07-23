@@ -7,13 +7,9 @@ $(document).on('page:change', function() {
     });
 });
 
-
 $(document).ready(function() {
     $('.vid-item').click(function() {
         var embedUrl = $(this).data('embed_url');
-        // console.log(embedUrl);
-        // console.log("What's in iframe now: " + document.getElementById('vid_frame').src);
         document.getElementById('vid_frame').src = "//" + embedUrl;
-        // console.log("Replaced: " + document.getElementById('vid_frame').src);
     });
 });

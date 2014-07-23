@@ -10,7 +10,7 @@ module SongPicklr
     end
 
     def youtube_query
-      results = RestClient.get("https://www.googleapis.com/youtube/v3/search?part=snippet&q=#{query}+karaoke&key=#{ENV['API_KEY']}")
+      results = RestClient.get("https://www.googleapis.com/youtube/v3/search?part=snippet&q=#{query}+karaoke&key=#{ENV['API_KEY']}&maxResults=10")
       JSON.parse(results)
     end
 
