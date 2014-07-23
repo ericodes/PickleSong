@@ -11,6 +11,23 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap.js
+//= require jquery.plugin.js
+//= require jquery.countdown.js
+//= require jquery.superslides.min.js
+//= require jquery.backtotop.js
+//= require jquery.parallax.js
+//= require jquery.backgroundvideo.js
+//= require venobox.min.js
+//= require waypoints.js
+//= require jquery.countTo.js
+//= require jquery.smooth-scroll.min.js
+//= require jquery.fitvid.js
+//= require jquery.sudoslider.min.js
 //= require jquery_ujs
+//= require main.js
 //= require turbolinks
+//= require jquery.turbolinks
+//= require modernizr.custom.js
+//= require grid
 //= require_tree .
