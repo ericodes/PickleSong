@@ -1,13 +1,13 @@
 
-<%= form_tag results_path do %>
-  <form class="navbar-form navbar-left form-inline" id="search" role="search">
+<%= form_tag results_path, id: "search" do %>
+  <form class="navbar-form navbar-left form-inline">
     <div class="form-group-group">
-      <div class="input-group" style="width: 220px;">
+      <div class="input-group" style="width: 700px;">
         <input type="text" id = "q" name = "q" class="form-control" placeholder="Pickl A Song">
         <span class="input-group-btn">
           <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
         </span>
       </div>
-    </div> 
+    </div>
   </form>
 <% end %>

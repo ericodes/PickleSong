@@ -115,12 +115,22 @@ div[class*="vid-item"] .desc {
 }
 
 
-#search {
-  display: inline-block;
-  right: -25px;
+form#search {
   float: right;
+  padding: 9px;
+
 }
 
 .navbar .navbar-brand {
-  padding: 10px 10px;
+  padding: 15px 15px;
+  float: left;
+}
+
+button.btn {
+  padding: 9px 12px;
+  margin: -5px;
+}
+
+.section-wrapper {
+  padding-top: 55px;
 }
