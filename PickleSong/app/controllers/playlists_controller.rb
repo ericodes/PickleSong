@@ -1,6 +1,5 @@
 class PlaylistsController < ApplicationController
   def index
-    @playlist = Playlist.new
     @playlists = Playlist.all
     @query = SongPicklr::Search.new(params[:q])
     if params[:q]
@@ -12,12 +11,17 @@ class PlaylistsController < ApplicationController
     render :index
   end
 
+  def new
+    @playlist = Playlist.new
+  end
+
   def create
-    @new_playlist = Playlist.new(playlist_params)
-    if !@new_playlist.save
-      flash[:notice] = "Please enter a name."
+    @new_playlist = Playlist.create!(playlist_params)
+    # binding.pry
+      respond_to do |format|
+        format.html { redirect_to playlists_url }
+        format.js
     end
-    redirect_to root_path
   end
 
   private

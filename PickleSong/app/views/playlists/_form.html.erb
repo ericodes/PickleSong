@@ -1,22 +1,5 @@
-<div id="playlist_panel">
-
-  <span class="dropdown polls-subtitle">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists<b class="caret"></b></a>
-    <ul class="dropdown-menu" role="menu">
-        <li class="new_playlist">New playlist</li>
-        <%@playlists.each_with_index do |playlist, i|%>
-          <li id= "<%=playlist.id%>" class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>" data-name="<%=playlist.name%>"> <%=playlist.name%></li>
-        <%end%>
-    </ul>
-  </span>
-
-  <div id="playlist_songs">
-  </div>
-
-</div>
-
 <div class="form">
-  <%=form_for @playlist do |f|%>
+  <%=form_for @playlist, remote: true do |f|%>
     <%= f.text_field :name%>
     <%= f.submit%>
   <%end%>
