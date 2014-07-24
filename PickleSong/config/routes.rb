@@ -1,20 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'results/new'
-
-  get 'results/create'
-
-  get 'playlists/new'
-
-  get 'playlists/create'
-
-  get 'playlists/edit'
-
-  get 'playlists/update'
-
-  get 'playlists/destroy'
-
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  resources :playlists
+  resources :results
   root "welcome#index"
   post '/' => 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
