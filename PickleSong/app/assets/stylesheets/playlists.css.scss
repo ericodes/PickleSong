@@ -1,3 +1,12 @@
 // Place all the styles related to the playlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#playlist_panel {
+    padding-top: 20px;
+}
+
+.dropdown.polls-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+}
