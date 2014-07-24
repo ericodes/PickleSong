@@ -22,21 +22,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <%= link_to(image_tag("pickles-128.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo", :size=>"20"), "/", :class=>"navbar-brand") %>
-                     <%= form_tag do %>
-                    <form class="navbar-form navbar-left form-inline">
-
-                            <div class="form-group-group" id="search" role="search">
-                                <div class="input-group" style="width: 220px;">
-                                    <input type="text" id = "q" name = "q" class="form-control" placeholder="Pickl A Song">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                            </div> <!-- END form group div -->
-
-                        </form> <!-- END search bar form -->
-                    <% end %>
+                        <%= link_to(image_tag("pickles-128.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo", :size=>"28"), "/", :class=>"navbar-brand") %>
+                        <%=render "results/form"%>
     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

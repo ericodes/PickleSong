@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  resources :playlists
+  resources :results
   root "welcome#index"
   post '/' => 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
