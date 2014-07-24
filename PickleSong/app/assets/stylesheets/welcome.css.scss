@@ -116,5 +116,11 @@ div[class*="vid-item"] .desc {
 
 
 #search {
+  display: inline-block;
+  right: -25px;
+  float: right;
+}
 
+.navbar .navbar-brand {
+  padding: 10px 10px;
 }

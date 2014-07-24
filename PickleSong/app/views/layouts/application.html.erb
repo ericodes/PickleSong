@@ -22,11 +22,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <%= link_to(image_tag("pickles-128.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo", :size=>"28"), "/", :class=>"navbar-brand") %>
+                        <%= link_to(image_tag("pickles-128.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo", :size=>"20"), "/", :class=>"navbar-brand") %>
                      <%= form_tag do %>
-                    <form class="navbar-form navbar-left form-inline" id="search" role="search">
+                    <form class="navbar-form navbar-left form-inline">
 
-                            <div class="form-group-group">
+                            <div class="form-group-group" id="search" role="search">
                                 <div class="input-group" style="width: 220px;">
                                     <input type="text" id = "q" name = "q" class="form-control" placeholder="Pickl A Song">
                                     <span class="input-group-btn">
