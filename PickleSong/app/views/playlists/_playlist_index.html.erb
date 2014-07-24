@@ -3,7 +3,8 @@
   <span class="dropdown polls-subtitle">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlists<b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu">
-        <%@playlists.each_with_index do |playlist, i|%>
+      <li><%= link_to "New Playlist", new_playlist_path, id: "new_link", remote: true %></li>
+        <%@playlists.each do |playlist|%>
           <li class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>"><%=playlist.name%></li>
         <%end%>
     </ul>
