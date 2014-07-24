@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'results/new'
+
+  get 'results/create'
+
+  get 'playlists/new'
+
+  get 'playlists/create'
+
+  get 'playlists/edit'
+
+  get 'playlists/update'
+
+  get 'playlists/destroy'
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   root "welcome#index"
   post '/' => 'welcome#index'
