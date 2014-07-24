@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <title>PickleSong</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,7 +23,21 @@
                             <span class="icon-bar"></span>
                         </button>
                         <%= link_to(image_tag("pickles-128.png", :alt => "logo", :title => "Home", :class=>"images", :id=>"logo", :size=>"28"), "/", :class=>"navbar-brand") %>
-                    </div>
+                     <%= form_tag do %>
+                    <form class="navbar-form navbar-left form-inline" id="search" role="search">
+
+                            <div class="form-group-group">
+                                <div class="input-group" style="width: 220px;">
+                                    <input type="text" id = "q" name = "q" class="form-control" placeholder="Pickl A Song">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div> <!-- END form group div -->
+
+                        </form> <!-- END search bar form -->
+                    <% end %>
+    </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,7 +47,7 @@
                                     Logged in as <strong><%= current_user.email %></strong>.
                                 </li>
                                 <li>
-                                    <%= link_to 'EDIT PROFILE', edit_user_registration_path %> |
+                                    <%= link_to 'EDIT PROFILE', edit_user_registration_path %>
                                 </li>
                                 <li>
                                     <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
@@ -48,7 +63,7 @@
                             </li>
                                   <% else %>
                                 <li>
-                                    <%= link_to "SIGN UP", new_user_registration_path %> |
+                                    <%= link_to "SIGN UP", new_user_registration_path %>
                                 </li>
                                 <li>
                                     <%= link_to "LOGIN", new_user_session_path %>
