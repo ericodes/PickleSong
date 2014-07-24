@@ -5,20 +5,10 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.create!(playlist_params)
-      # binding.pry
-      # if request.xhr?
-      #   format.js
-      # else
-      #   format.html {redirect_to root_path}
-      # end
-      # respond_to do |format|
-      #   format.html {redirect_to root_path}
-      #   format.js
-      # end
-    # else
-    #   flash[:notice] = "Please name your playlist."
-    #   render "welcome/index"
-    # end
+      respond_to do |format|
+        format.html {redirect_to root_path}
+        format.js
+      end
   end
 
   def edit

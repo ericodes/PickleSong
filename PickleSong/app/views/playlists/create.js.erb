@@ -1,5 +1,3 @@
-$('#new_playlist').remove();
+$('.new_playlist').remove();
 $('#new_link').show();
-$('.dropdown-menu').append("Hello");
-
-// <li class="playlist" data-songs="<%=playlist.songs.to_json%>" data-playlistid="<%=playlist.id%>"><%=playlist.name%></li>
+$('.dropdown-menu').append("<li class='playlist' data-songs=" + '<%=j Playlist.last.songs.to_json%>' + "data-playlistid=" + '<%= j Playlist.last.id.to_s%>' + ">" + '<%= j Playlist.last.name %>' + "</li>");

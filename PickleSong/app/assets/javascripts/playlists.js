@@ -1,4 +1,7 @@
 $(document).on('page:change', function() {
+    $('.dropdown-toggle').click(function() {
+        // $(this).('.dropdown-menu');
+    });
     $('.playlist').click(function() {
         var songData = $(this).data('songs');
         var playlistName = $(this).data('name');
@@ -11,15 +14,4 @@ $(document).on('page:change', function() {
             }));
         }
     });
-
-
-
-    $(".playlist_submit").click(function() {
-        debugger;
-        $.post("/playlists", function(data) {
-            console.log("worked");
-            debugger;
-            $("element").append(data)
-        })
-    })
 });
