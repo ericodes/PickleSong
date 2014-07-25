@@ -3,6 +3,6 @@
     <li><%= link_to "New Playlist", new_playlist_path, id: "new_link", remote: true %></li>
     <%@playlists.each do |playlist|%>
         <li><a class="playlist" data-songs="<%=playlist.songs.to_json%>" id="<%=playlist.id%>" data-name="<%=playlist.name%>" data-playlistid="<%=playlist.id%>"><%=playlist.name%>
-        <%=link_to "delete", playlist, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: "playlist_delete"%></a></li>
+       </a></li>
     <%end%>
 </ul>
