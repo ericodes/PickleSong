@@ -1,3 +1,10 @@
 $('.new_playlist').remove();
 $('#new_link').show();
 $('.dropdown-menu').append("<li class='playlist' data-songs=" + '<%=j Playlist.last.songs.to_json%>' + "data-playlistid=" + '<%= j Playlist.last.id.to_s%>' + ">" + '<%= j Playlist.last.name %>' + "</li>");
+
+$('.playlist').click(function() {
+    var songData = $(this).data('songs');
+    $('#playlist_songs').empty();
+    var playlist = $(this);
+    $('#playlist_songs').append("<h4 class='active-playlist' data-id=" + '<%= j Playlist.last.id.to_s %>' + ">" + '<%= j Playlist.last.name %>' + "</h4>")
+});
