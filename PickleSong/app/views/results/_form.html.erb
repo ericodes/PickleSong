@@ -1,12 +1,12 @@
-<%= form_tag results_path, id: "search" do %>
+<%= form_tag results_path, id: "search", remote: true do %>
   <form class="navbar-form navbar-left form-inline">
     <div class="form-group-group">
       <div class="input-group" style="width: 700px;">
         <input type="text" id = "q" name = "q" class="form-control" placeholder="Pickl A Song">
         <span class="input-group-btn">
           <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-        </span>
-      </div>
-    </div>
+        </span><!--input-group-btn-->
+      </div><!--input-group-->
+    </div><!--form-group-group-->
   </form>
 <% end %>

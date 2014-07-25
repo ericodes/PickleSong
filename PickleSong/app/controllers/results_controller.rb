@@ -4,17 +4,13 @@ class ResultsController < ApplicationController
 
   def create
     @query = SongPicklr::Search.new(params[:q])
-    if params[:q]
-      @results = @query.query_items
-      @first_result = @results.first
-      # binding.pry
-      @alternatives = @results[1..-1]
-    end
+    @results = @query.query_items
+    @main = @results.first
+    @alternatives = @results
     @playlists = Playlist.all
-    render "welcome/index"
+    respond_to do |format|
+      format.html {redirect_to root_path}
+      format.js
+    end
   end
-
 end
-
-
-    

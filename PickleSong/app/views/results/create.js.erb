@@ -1,0 +1,9 @@
+if (($('.main-video').children().length === 0) && ($('.search-results').children().length === 0)){
+    $('.welcome-message').hide();
+}
+
+if ($('.main-video').children().length === 0){
+    $('.main-video').html("<%= j(render("results/vidmain")) %>");
+}
+
+$('.search-results').html("<%= j(render("results/vidresults")) %>");
