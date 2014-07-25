@@ -1,4 +1,4 @@
-$(document).on('page:change', function() {
+$(document).ready(function () {
     $('.playlist').click(function() {
         var songData = $(this).data('songs');
         $('#playlist_songs').empty();
@@ -9,11 +9,16 @@ $(document).on('page:change', function() {
             item: playlist
         }));
         for (var i = 0; i < songData.length; i++) {
-            var templateString = "<div class='song'><h4><%= item.title %></h4><div><img src='<%=item.thumbnail%>'></div></div>";
+            var templateString = "<div data-embed-url='<%= item.embed_url %>' class='song'><h4><%= item.title %></h4><div><img src='<%=item.thumbnail%>'></div></div>";
             var template = _.template(templateString);
             $('#playlist_songs').append(template({
                 item: songData[i]
             }));
         }
+        $('.song').click(function() {
+            console.log("clicked playlist's song");
+            var embedUrl = $(this).data('embed-url');
+            document.getElementById('vid_frame').src = "//" + embedUrl;
+        });
     });
 });
