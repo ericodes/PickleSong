@@ -46,7 +46,7 @@ input#q {
 }
 
 .vid-list {
-  width: 2100px;
+  width: 2220px;
   position: relative;
   top:0;
   left: 0;
@@ -63,18 +63,17 @@ div[class*="vid-item"]{
 
 .thumb {
   overflow:hidden;
-  height: 84px;
+  height: 70px;
 }
 
 .thumb img {
   width: 100%;
   position: relative;
-  top: -13px;
 }
 
 div[class*="vid-item"] .desc {
-  width: 100px;
-
+  width: 128px;
+  text-align: left;
   color: black;
   font-size: 15px;
   margin-top:5px;
@@ -134,7 +133,6 @@ div[class*="vid-item"] .desc {
 form#search {
   float: right;
   padding: 9px;
-
 }
 
 .navbar .navbar-brand {

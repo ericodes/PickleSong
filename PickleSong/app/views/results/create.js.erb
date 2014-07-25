@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).on('page:change', function() {
+$(document).ready(function() {
     $(".arrow-right").bind("click", function(event) {
         event.preventDefault();
         $(".vid-list-container").stop().animate({
