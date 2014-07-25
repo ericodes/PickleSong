@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('.playlist').click(function() {
         var songData = $(this).data('songs');
         $('#playlist_songs').empty();
