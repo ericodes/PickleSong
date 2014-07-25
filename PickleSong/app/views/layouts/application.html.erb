@@ -35,11 +35,7 @@
                                     <li><%= link_to 'EDIT PROFILE', edit_user_registration_path %></li>
                                     <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLAYLISTS <b class="caret"></b></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="light-index-video.html">Party</a></li>
-                                            <li><a href="light-index-static.html">All by Myself</a></li>
-                                        </ul>
+                                        <%=render "playlists/playlist_dropdown"%>
                                     </li><!--dropdown-->
                                 <% else %>
                                     <li><%= link_to "SIGN UP", new_user_registration_path %></li>
