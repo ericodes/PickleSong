@@ -8,12 +8,7 @@ $(document).ready(function() {
         $('#playlist_songs').append(titleTemp({
             item: playlist
         }));
-        $('.delete-button').click(function() {
-            $.ajax({
-                url: '/playlists/' + $(this).data("playlistid"),
-                type: 'DELETE'
-            });
-        });
+
         for (var i = 0; i < songData.length; i++) {
             var templateString = "<div class='clearfix'><div class='song' data-embed-url='<%= item.embed_url %>' data-title='<%= item.title %>'><span id='pl-song-thumb'><img src='<%=item.thumbnail%>'></span><h4 id='pl-song-title' class='truncate'><%= item.title %></h4></div></div>";
             var template = _.template(templateString);
