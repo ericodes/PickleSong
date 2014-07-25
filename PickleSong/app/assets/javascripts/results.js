@@ -1,8 +1,8 @@
 $(document).on('page:change', function() {
     $('.vid-item').click(function() {
         console.log('clicked');
-        var embedUrl = $(this).data('embed_url');
-        document.getElementById('vid_frame').src = "//" + embedUrl;
+        var vidAttributes = $(this).data('attributes');
+        // POST TO SONGS CONTROLLER#create
     });
 });
 

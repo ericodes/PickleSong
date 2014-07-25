@@ -3,7 +3,7 @@ $(document).on('page:change', function() {
         var songData = $(this).data('songs');
         $('#playlist_songs').empty();
         var playlist = $(this);
-        var titleTemplate = "<h4 class='<%=item.data('playlistid')%>'><%=item.data('name')%></h4>";
+        var titleTemplate = "<h4 class='active-playlist' data-id='<%= item.data('playlistid') %>'><%= item.data('name') %></h4>";
         var titleTemp = _.template(titleTemplate);
         $('#playlist_songs').append(titleTemp({
             item: playlist

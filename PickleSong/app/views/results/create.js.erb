@@ -7,3 +7,33 @@ if ($('.main-video').children().length === 0){
 }
 
 $('.search-results').html("<%= j(render("results/vidresults")) %>");
+
+$(document).ready(function() {
+    $('.vid-item').click(function() {
+        console.log('clicked');
+        var vidAttributes = $(this).data('attributes');
+        var activePlaylist = $('.active-playlist').data('id');
+        $.ajax({
+            type: "POST",
+            url: "/songs",
+            data: {song: vidAttributes, playlist: activePlaylist},
+            dataType: 'script',
+            success: console.log("It worked!", vidAttributes, activePlaylist)
+        });
+    });
+});
+
+$(document).on('page:change', function() {
+    $(".arrow-right").bind("click", function(event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "+=336"
+        }, 750);
+    });
+    $(".arrow-left").bind("click", function(event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "-=336"
+        }, 750);
+    });
+});
