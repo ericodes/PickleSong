@@ -18,6 +18,11 @@ class PlaylistsController < ApplicationController
   end
 
   def destroy
+    @playlist = Playlist.destroy(params[:id])
+    respond_to do |format|
+      format.html {redirect_to root_path}
+      format.js
+    end
   end
 
   private
