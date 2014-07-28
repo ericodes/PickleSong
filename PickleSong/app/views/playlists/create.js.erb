@@ -6,5 +6,12 @@ $('.playlist').click(function() {
     var name = $(this).data('name')
     $('#playlist_songs').empty();
     $('#playlist_songs').append("<h4 class='active-playlist' data-id=" + id + ">" + name + "</h4>")
-    $('#playlist_songs').append("<%= j render 'destroy' %>");
+    $('#playlist_songs').append("<a class='delete-button'><i class='fa fa-minus-circle'></i></a>");
+    $('.delete-button').click(function() {
+        var playlist = $('.active-playlist').data('id');
+        $.ajax({
+            url: "/playlists/" + id,
+            type: "DELETE"
+        });
+    });
 });

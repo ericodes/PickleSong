@@ -1,5 +1,0 @@
- <%if @playlist %>
- <%=link_to "delete", @playlist, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: "playlist_delete"%>
- <%else%>
- <%=link_to "delete", Playlist.last, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: "playlist_delete"%>
- <%end%>
